@@ -42,37 +42,37 @@ banner_display()
 #
 #
 def program():
-    number = input("[+] put number with country code like: +91: +")
+    number = input("[+] Put Number with country code like +91: +")
     realnumber = "+"+number
     check = number.isnumeric()
     lennber = len(number)
     if (check == True):
         if (lennber < 10 or lennber > 10):
-            delay_print(f"{Fore.RED}please enter number with country code\n")
+            delay_print(f"{Fore.RED}Number must be 10 digits\n")
             program()
         elif (lennber==10):
-            delay_print(f"{Fore.GREEN}1) ban number\n")
-            delay_print(f"{Fore.RED}2) information about this matter\n")
-            option = input(f"{Fore.GREEN}[+] Choose an option: ")
+            delay_print(f"{Fore.YELLOW}1) Ban number\n")
+            delay_print(f"{Fore.YELLOW}2) Information about this number\n")
+            option = input(f"{Fore.YELLOW}[+] Choose an option: ")
             if (option=="1"):
-                delay_print(f"{Fore.RED} are you sure to ban"+realnumber+"?\n")
+                delay_print(f"{Fore.YELLOW}Are you sure to ban "+realnumber+"?\n")
                 yesorno1 = input("(Y/N): ")
-                delay_print("8579 successfully send number+" will be banned in less than 8 hour's")
+                delay_print("8579 reports Have been send and "+realnumber+" will be banned in less than 8 hours!")
                 data.lockout()
 
             elif (option=="2"):
-                delay_print(f"{Fore.YELLOW}Gather information for"+realnumber+"?\n")
+                delay_print(f"{Fore.YELLOW}Gather information for "+realnumber+"?\n")
                 yesorno2 = input("(Y/N): ")
-                delay_print("Name: 47hxl-53r\nStatus: Take-Down by VeNoM")
+                delay_print("Name: 47hxl-53r\nStatus: Take-Down by VeNoM!")
                 data.lockout()
 
             else:
-                delay_print(f"{Fore.RED}it's not an option\n")
+                delay_print(f"{Fore.RED}It's not an option\n")
                 program()
 
 
     else:
-        delay_print(f"{Fore.RED}Number is incorrect... please try again. . .\n")
+        delay_print(f"{Fore.RED}Number is incorrect... Please try again . . .\n")
         print("")
         program()
 program()
